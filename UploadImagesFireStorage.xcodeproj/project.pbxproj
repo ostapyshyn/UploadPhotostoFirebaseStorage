@@ -13,9 +13,11 @@
 		0B9A41C52572DEB900964A62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9A41C32572DEB900964A62 /* Main.storyboard */; };
 		0B9A41C72572DEBC00964A62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9A41C62572DEBC00964A62 /* Assets.xcassets */; };
 		0B9A41CA2572DEBC00964A62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9A41C82572DEBC00964A62 /* LaunchScreen.storyboard */; };
+		585AA681D77454C59ED4DA76 /* Pods_UploadImagesFireStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017A9F65C2BDC25D5A56FECC /* Pods_UploadImagesFireStorage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		017A9F65C2BDC25D5A56FECC /* Pods_UploadImagesFireStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UploadImagesFireStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9A41BA2572DEB900964A62 /* UploadImagesFireStorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UploadImagesFireStorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9A41BD2572DEB900964A62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B9A41BF2572DEB900964A62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		0B9A41C62572DEBC00964A62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B9A41C92572DEBC00964A62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B9A41CB2572DEBC00964A62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C0EA43FB7ACE34B0F6BDFA3 /* Pods-UploadImagesFireStorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UploadImagesFireStorage.debug.xcconfig"; path = "Target Support Files/Pods-UploadImagesFireStorage/Pods-UploadImagesFireStorage.debug.xcconfig"; sourceTree = "<group>"; };
+		788BF8D329691D33B207B031 /* Pods-UploadImagesFireStorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UploadImagesFireStorage.release.xcconfig"; path = "Target Support Files/Pods-UploadImagesFireStorage/Pods-UploadImagesFireStorage.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				585AA681D77454C59ED4DA76 /* Pods_UploadImagesFireStorage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				0B9A41BC2572DEB900964A62 /* UploadImagesFireStorage */,
 				0B9A41BB2572DEB900964A62 /* Products */,
+				C1F2FB8ABB5AB064CDB4F01F /* Pods */,
+				41687A7F76733F81DA54B433 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = UploadImagesFireStorage;
 			sourceTree = "<group>";
 		};
+		41687A7F76733F81DA54B433 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				017A9F65C2BDC25D5A56FECC /* Pods_UploadImagesFireStorage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1F2FB8ABB5AB064CDB4F01F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C0EA43FB7ACE34B0F6BDFA3 /* Pods-UploadImagesFireStorage.debug.xcconfig */,
+				788BF8D329691D33B207B031 /* Pods-UploadImagesFireStorage.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0B9A41CE2572DEBC00964A62 /* Build configuration list for PBXNativeTarget "UploadImagesFireStorage" */;
 			buildPhases = (
+				6AA4886E6A4073D34B6324B4 /* [CP] Check Pods Manifest.lock */,
 				0B9A41B62572DEB900964A62 /* Sources */,
 				0B9A41B72572DEB900964A62 /* Frameworks */,
 				0B9A41B82572DEB900964A62 /* Resources */,
+				99DB242D99719CB4ECF11D89 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6AA4886E6A4073D34B6324B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UploadImagesFireStorage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99DB242D99719CB4ECF11D89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UploadImagesFireStorage/Pods-UploadImagesFireStorage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UploadImagesFireStorage/Pods-UploadImagesFireStorage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UploadImagesFireStorage/Pods-UploadImagesFireStorage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0B9A41B62572DEB900964A62 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		0B9A41CF2572DEBC00964A62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C0EA43FB7ACE34B0F6BDFA3 /* Pods-UploadImagesFireStorage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		0B9A41D02572DEBC00964A62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 788BF8D329691D33B207B031 /* Pods-UploadImagesFireStorage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
