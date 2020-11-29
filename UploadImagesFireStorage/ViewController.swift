@@ -13,6 +13,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet var image: UIImageView!
     @IBOutlet var label: UILabel!
     
+    
+    
     private let storage = Storage.storage().reference()
     
     override func viewDidLoad() {
@@ -20,6 +22,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         label.numberOfLines = 0
         label.textAlignment = .center
         image.contentMode = .scaleAspectFit
+        
+        guard let urlString = UserDefaults.standard.value(forKey: "url") as? String,
+              let url = URL(string: urlString) else {
+            print("error user def")
+            return
+        }
+        
+        label.text = urlString
+        
+        let task = URLSession.shared.dataTask(with: url) { (data, _, error) in
+            guard let data = data, error == nil else {
+                return
+            }
+            DispatchQueue.main.async {
+                let image = UIImage(data: data)
+                self.image.image = image
+            }
+        }
+        task.resume()
+
     }
     
     @IBAction func didTapUploadButton(_ sender: UIBarButtonItem) {
@@ -54,9 +76,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                     print("test")
                     return
                 }
-                let urlString = url.absoluteURL
+                let urlString = url.absoluteString
+                
+                DispatchQueue.main.async {
+                    self.label.text = urlString
+                    self.image.image = image
+                }
+                
                 print("Download URL: \(urlString)")
-                UserDefaults.standard.set(url, forKey: "url")
+                UserDefaults.standard.set(urlString, forKey: "url")
             }
              
         
