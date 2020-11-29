@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>427542677244-9gl09e0d3160n9theg8abmal7af7va3b.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.427542677244-9gl09e0d3160n9theg8abmal7af7va3b</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCiRW76VLIBTG_W5dANA6iODcR5_-ibVtI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>427542677244</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Ostapyshyn.UploadImagesFireStorage</string>
+	<key>PROJECT_ID</key>
+	<string>photouploader-777e8</string>
+	<key>STORAGE_BUCKET</key>
+	<string>photouploader-777e8.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:427542677244:ios:4838a4e529ac7aba0cf979</string>
+	<key>DATABASE_URL</key>
+	<string>https://photouploader-777e8.firebaseio.com</string>
+</dict>
+</plist>
