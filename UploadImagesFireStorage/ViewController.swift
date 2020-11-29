@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var image: UIImageView!
     @IBOutlet var label: UILabel!
+    
+    private let storage = Storage.storage().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +42,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         guard let imageData = image.pngData() else {
             return
+        }
+        
+        storage.child("prizes/file.png").putData(imageData, metadata: nil) {  (_, error) in
+            guard error == nil else {
+                print("Failed to upload")
+                return
+            }
+            self.storage.child("prizes/file.png").downloadURL { (url, error) in
+                guard let url = url, error == nil else {
+                    print("test")
+                    return
+                }
+                let urlString = url.absoluteURL
+                print("Download URL: \(urlString)")
+                UserDefaults.standard.set(url, forKey: "url")
+            }
+             
+        
         }
     }
     
